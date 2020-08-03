@@ -4,7 +4,6 @@ public class BowlingGame {
     private int[][] hitBowls;
     private int[] scores;
 
-
     public BowlingGame(int[][] hitBowls) {
         this.hitBowls = hitBowls;
         this.scores = new int[10];

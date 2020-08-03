@@ -26,4 +26,12 @@ public class BowlingGameTest {
         int[] score = bowlingGame.getScore();
         assertArrayEquals(new int[]{18,8,20,14,5,11,2,6,7,11}, score);
     }
+
+    @Test
+    void should_get_score_when_strike_in_the_10_frame_given_bowls_of_each_throws() {
+        int[][] hitBowls = new int[][]{{10}, {3,5}, {10},{8,2},{4,1},{3,7},{1,1},{2,4},{2,5},{10},{10},{10}};
+        BowlingGame bowlingGame = new BowlingGame(hitBowls);
+        int[] score = bowlingGame.getScore();
+        assertArrayEquals(new int[]{18,8,20,14,5,11,2,6,7,30}, score);
+    }
 }
